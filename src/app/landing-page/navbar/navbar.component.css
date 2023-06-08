@@ -1,0 +1,20 @@
+.nav-bar-1{
+  background-color: #000000;
+  height: 2.125rem;
+}
+.nav-bar-2{
+  background-color: #0c0c0c;
+  height: 6.125rem;
+}
+
+#nav-item-left{
+  margin-left: 5px;
+  margin-right: 5px;
+  color: aliceblue;
+}
+#nav-item-right{
+  right: 6px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: aliceblue;
+}
