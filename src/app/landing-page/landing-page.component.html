@@ -1,3 +1,84 @@
-<div>
-  <app-navbar></app-navbar>
+<div class="nav-bar">
+  <div style="display: flex; align-items: center">
+    <a href="/home"><img src="../../common/image/logo.png" width="250px" height="65px" /></a>
+
+    <div style="margin-left: 10px; display: flex; position: fixed; right: 15px">
+      <img
+        src="../common/image/vi.png"
+        alt="profile"
+        class="user-image rounded-circle"
+        style="width: 30px; height: 30px; margin-right: 5px"
+        (click)="switchLanguage('vi')"
+      />
+      <img
+        src="../common/image/en.png"
+        alt="profile"
+        class="user-image rounded-circle"
+        style="width: 30px; height: 30px; margin-right: 15px"
+        (click)="switchLanguage('en')"
+      />
+      <img
+        src="../../common/image/profile.png"
+        alt="profile"
+        class="user-image rounded-circle"
+        style="width: 30px; height: 30px"
+      />
+      <span class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="true"
+        >
+          nvvanh1
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li>
+            <a class="dropdown-item" (click)="logout()">{{ "LOG_OUT" | translate }}</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">{{
+              "ACCOUNT_INFORMATION" | translate
+            }}</a>
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li>
+            <a class="dropdown-item" href="#">{{ "SETTING" | translate }}</a>
+          </li>
+        </ul>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <!-- MENU -->
+    <div class="col-md-2">
+      <div class="sidebar">
+        <a class="sidebar-item" href="/home/product-management"
+          ><strong>{{ "PRODUCT" | translate }}</strong></a
+        >
+        <a class="sidebar-item" href="/home/user-management"
+          ><strong>{{ "USER_MANAGEMENT" | translate }}</strong></a
+        >
+        <a class="sidebar-item" href="/home/system-management"
+          ><strong>{{ "SYSTEM_CONFIGURATION" | translate }}</strong></a
+        >
+        <a class="sidebar-item" href="/home/permission-management"
+          ><strong>{{ "PERMISSION" | translate }}</strong></a
+        >
+        <a class="sidebar-item" href="/home/task-management"
+          ><strong>{{ "TASK_MANAGEMENT" | translate }}</strong></a
+        >
+      </div>
+    </div>
+    <!-- BODY -->
+    <div class="col-md-10">
+      <div class="main-page">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
 </div>

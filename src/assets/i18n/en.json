@@ -1,0 +1,11 @@
+{
+  "PRODUCT": "Product",
+  "USER_MANAGEMENT": "User Management",
+  "SYSTEM_CONFIGURATION": "System Configuration",
+  "PERMISSION": "Permission",
+  "TASK_MANAGEMENT": "Task Management",
+  "LOGIN" : "Login",
+  "LOG_OUT" : "Log out",
+  "ACCOUNT_INFORMATION" : "Account Information",
+  "SETTING" : "Setting"
+}

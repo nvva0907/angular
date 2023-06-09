@@ -14,7 +14,7 @@ export class LoginPageComponent implements OnInit {
   password: string;
   isRemember: boolean;
   message_error: string;
-  login_url: string = environment.baseURL + '/auth/login';
+  login_url: string = environment.baseURL + 'authen/login';
 
   constructor(private http: HttpClient, private router: Router) {
     this.username = '';
@@ -36,7 +36,7 @@ export class LoginPageComponent implements OnInit {
           token: data.data,
         };
         saveInformationIntoStorage(this.isRemember, infomation);
-        this.router.navigate(['/landing']);
+        this.router.navigate(['/home']);
         console.log("LANDING")
       },
       (error) => {
