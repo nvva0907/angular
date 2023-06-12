@@ -14,7 +14,7 @@ export class LoginPageComponent implements OnInit {
   password: string;
   isRemember: boolean;
   message_error: string;
-  login_url: string = environment.baseURL + 'authen/login';
+  login_url: string = environment.baseURL + 'auth/login';
 
   constructor(private http: HttpClient, private router: Router) {
     this.username = '';

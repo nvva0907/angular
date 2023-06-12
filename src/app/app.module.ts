@@ -15,6 +15,8 @@ import { ProductPageComponent } from './landing-page/product-page/product-page.c
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AddUserComponent } from './modal/add-user/add-user.component';
+import { UpdateUserComponent } from './modal/update-user/update-user.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -29,7 +31,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SystemPageComponent,
     TaskPageComponent,
     PermissionPageComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    AddUserComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

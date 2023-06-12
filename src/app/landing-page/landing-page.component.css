@@ -1,28 +1,44 @@
-.col-md-2 {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 300px;
-  border-right: 2px solid #000;
-}
 .nav-bar {
-  height: 70px;
+  height: auto;
   width: 100%;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #999696;
   margin-bottom: 5px;
+  position: fixed;
+  background-color: #3c8dbc;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
-
 .sidebar {
   display: block;
 }
 .sidebar-item {
+  display: block;
   text-decoration: none;
   color: #000;
-  border-bottom: 2px solid #000;
-  display: block;
   padding: 8px;
-  margin-bottom: 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: rgb(255, 253, 253);
+  left: 2px;
 }
-
-.main-page {
+.sidebar-item:hover {
+  background-color: rgb(223, 223, 221); /* Thay đổi màu khi hover vào */
+}
+.sidebar-item.active {
+  background-color: rgb(223, 223, 221); /* Màu mới khi click vào */
+}
+.col-md-2 {
+  position: fixed;
+  margin-top: 50px;
+  border-right: 2px solid #999696;
+  height: 100vh;
+  width: 250px;
+  background-color: rgb(255, 255, 255);
+}
+.col-md-10 {
+  position: fixed;
+  margin-top: 70px;
+  margin-left: 250px;
 }
