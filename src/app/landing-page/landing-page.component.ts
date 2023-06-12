@@ -12,12 +12,10 @@ export class LandingPageComponent implements OnInit {
     private translate: TranslateService,
     private router: Router,
     private languageService: LanguageService
-  ) {
-
-  }
+  ) {}
   ngOnInit(): void {
     const currentLanguage: string = this.languageService.getCurrentLanguage();
-    console.log("currentLanguage" + currentLanguage);
+    console.log('currentLanguage' + currentLanguage);
     this.translate.use(currentLanguage);
   }
   switchLanguage(language: string) {

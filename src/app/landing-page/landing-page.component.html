@@ -1,6 +1,9 @@
 <div class="nav-bar">
   <div style="display: flex; align-items: center">
-    <a href="/home"><img src="../../common/image/logo.png" width="250px" height="65px" /></a>
+    <a href="/home" style="margin-left: 30px">
+      <!-- <img src="../../common/image/logofpt.png" width="250px" height="80px"/> -->
+      <img src="https://mgmt.idcheck.xplat.online/img/logo.png" />
+    </a>
 
     <div style="margin-left: 10px; display: flex; position: fixed; right: 15px">
       <img
@@ -36,7 +39,9 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li>
-            <a class="dropdown-item" (click)="logout()">{{ "LOG_OUT" | translate }}</a>
+            <a class="dropdown-item" (click)="logout()">{{
+              "LOG_OUT" | translate
+            }}</a>
           </li>
           <li>
             <a class="dropdown-item" href="#">{{
@@ -57,28 +62,28 @@
     <!-- MENU -->
     <div class="col-md-2">
       <div class="sidebar">
-        <a class="sidebar-item" href="/home/product-management"
+        <a class="sidebar-item" [routerLink]="['/home/product-management']"
           ><strong>{{ "PRODUCT" | translate }}</strong></a
         >
-        <a class="sidebar-item" href="/home/user-management"
+        <a class="sidebar-item" [routerLink]="['/home/user-management']"
           ><strong>{{ "USER_MANAGEMENT" | translate }}</strong></a
         >
-        <a class="sidebar-item" href="/home/system-management"
+        <a class="sidebar-item" [routerLink]="['/home/system-management']"
           ><strong>{{ "SYSTEM_CONFIGURATION" | translate }}</strong></a
         >
-        <a class="sidebar-item" href="/home/permission-management"
+        <a class="sidebar-item" [routerLink]="['/home/permission-management']"
           ><strong>{{ "PERMISSION" | translate }}</strong></a
         >
-        <a class="sidebar-item" href="/home/task-management"
+        <a class="sidebar-item" [routerLink]="['/home/task-management']"
           ><strong>{{ "TASK_MANAGEMENT" | translate }}</strong></a
         >
       </div>
     </div>
+
     <!-- BODY -->
     <div class="col-md-10">
-      <div class="main-page">
-        <router-outlet></router-outlet>
-      </div>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
+<app-add-user></app-add-user>
